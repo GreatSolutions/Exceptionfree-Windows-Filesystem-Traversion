@@ -13,27 +13,10 @@ struct DataContext
 	std::string name;
 }DataContextObject;
 
-void demo()
-{
-	adjust_privileges();
-
-	fs::recursive_directory_iterator item(L"c:\\", fs::directory_options::skip_permission_denied);
-	const fs::recursive_directory_iterator end;
-
-	while (item != end)
-	{
-		printf("%S\n", item->path().filename().c_str());
-		auto lol = item->path().filename().string();
-		std::cout << std::hex << (int)lol[0] << "\n";
-		++item;
-	}
-}
-
-
 int main(void)
 {
 	adjust_privileges();
-	//demo();
+	
 	std::vector<DataContext> Presorted[255];
 	fs::recursive_directory_iterator item(L"c:\\", fs::directory_options::skip_permission_denied);
 	const fs::recursive_directory_iterator end;
