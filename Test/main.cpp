@@ -1,5 +1,6 @@
 //filesystem Exceptionsolution to traverse systemfiles on Windows
-
+// TODO:-> Key Struct
+// unordered_map<Key,std::vector<fs:path>>
 #include <iostream>
 #include <filesystem>
 #include <Windows.h>
